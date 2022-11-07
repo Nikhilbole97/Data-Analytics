@@ -1,0 +1,130 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+global f
+f = 0
+
+#this t_movie function is used toselect movie name
+def t_movie():
+    global f
+    f = f+1
+    print("which movie do you want to watch?")
+    print("1.KGF 1")
+    print("2.Bahubali")
+    print("3.Bramhastra")
+    print("4.Back")
+    movie = int(input("choose your movie: "))
+    if movie == 4:
+    
+#in this it goes to centre function and from centre it goes to movie function and its come back here and
+     centre()
+    theater()
+    snacks()
+    return 0
+    if f ==1:
+     theater()
+    
+#this theater function used to select screen
+def theater():
+    print("which screen do you want to watach movie: ")
+    print("1.Screen 1")
+    print("2.Screen 2")
+    print("3.screen 3")
+    a = int(input("choose your screen: "))
+    ticket = int(input("number of ticket do you want ?: "))
+    
+    
+def snacks():
+    print("which snacks you want: ")
+    print("1. popcorn")
+    print("2. Thumbsup")
+    print("3. potato chips")
+    snacks = int(input("choose your option: "))
+    timing(snacks)
+    return(0)
+       
+    
+#this timing function used to select timing for movie
+def timing(a):
+    time1={"1": "10.00-1.00",
+           "2": "1.10-4.10",
+           "3": "4.20-7.20",
+           "4": "7.30-10.30"}
+    
+    time2={"1": "10.15-1.15",
+           "2": "1.20-4.25",
+           "3": "4.35-7.35",
+           "4": "7.45-10.45"}
+    
+    time3={"1": "10.30-1.30",
+           "2": "1.40-4.40",
+           "3": "4.50-7.50",
+           "4": "8.00-10.45"}
+    
+    if a == 1:
+        print("choose your time:")
+        print(time1)
+        t = input("select your time:")
+        x = time1[t]
+        print("sucessful! enjoy movie at "+x)
+        
+    elif a ==2:
+        print("choose your timme:")
+        print(time2)
+        t = input("selcet your time:")
+        x = time2[t]
+        print("sucessful! enjoy your movie at"+x)
+    elif a ==3:
+        print("choose your time:")
+        print(time3)
+        t = input("select your time:")
+        x = time3[t]
+        print("sucessful! enjoy your movie at"+x)
+        return 0
+    
+def movie(theater):
+    if theater ==1:
+        t_movie()
+    elif theater == 2:
+        t_movie()
+    elif theater == 3:
+        t_movie()
+    elif theater == 4:
+        city()
+    else:
+        print("wrong choice")
+        
+def centre():
+    print("which theater do you wish to see movie? ")
+    print("1.Nexus Vijaya Mall")
+    print("2.Satyam Cinemas")
+    print("3.Ceneplex")
+    print("4.Back")
+    a = int(input("choose your option: "))
+    movie(a)
+    return 0
+
+#this function is used to select city
+def city():
+    print("Hi, welcome to movie ticket booking : ")
+    print("where you want to watch movie? ")
+    print("1.Akola")
+    print("2.Amravati")
+    print("3.Nagpur")
+    place = int(input("choose your option: "))
+    if place == 1:
+     centre()
+    elif place == 2:
+     centre()
+    elif place == 3:
+     centre()
+    else:
+     print("wrong choice")
+        
+city() #ti calls the function city
+
+
+# In[ ]:
